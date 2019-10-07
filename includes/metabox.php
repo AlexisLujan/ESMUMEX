@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*Metabox Pagina Inicio Landing*/
 function cmb2_pagina_inicio() {
     $prefix = 'cmb2_paghome_';
@@ -59,10 +59,10 @@ function cmb2_pagina_inicio() {
 		'add_button'        => __( 'Añadir otro Evento', 'cmb2' ),
 		'remove_button'     => __( 'Eliminar Evento', 'cmb2' ),
 		'sortable'          => true,
-		'closed'         => true, 
-		// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ), 
+		'closed'         => true,
+		// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ),
 		),
-	) );	
+	) );
 	$cmb->add_group_field( $group_field_id, array(
 		'name'    => 'Titulo',
 		'desc'    => 'Titulo del evento anual',
@@ -104,10 +104,10 @@ function cmb2_pagina_inicio() {
 		'add_button'        => __( 'Añadir otro Servicio', 'cmb2' ),
 		'remove_button'     => __( 'Eliminar Servicio', 'cmb2' ),
 		'sortable'          => true,
-		'closed'         => true, 
-		// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ), 
+		'closed'         => true,
+		// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ),
 		),
-	) );	
+	) );
 	$cmb->add_group_field( $group_field_id, array(
 		'name'    => 'Titulo',
 		'desc'    => 'Titulo del Servicio',
@@ -118,8 +118,7 @@ function cmb2_pagina_inicio() {
 	$cmb->add_group_field( $group_field_id, array(
 		'name' => __( 'URL Servicio', 'cmb2' ),
 		'id'   => 'txturlserv',
-		'type' => 'text_url',
-		// 'protocols' => array( 'http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet' ), // Array of allowed protocols
+		'type' => 'text_medium',
 	)  );
 	$cmb->add_group_field( $group_field_id, array(
 		'name'    => 'Imagen personalizada',

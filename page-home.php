@@ -1,371 +1,100 @@
 <?php /* template Name: Pagina Inicio */ ?>
-<?php get_header(); ?>
-
+<?php     get_header(); $prefix = 'cmb2_paghome_'; ?>
 
 <!--Carousel para los banners-->
-<section>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="carousel slide" id="principal-carousel" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#principal-carousel" data-slid-to="0" class="active"></li>
-                        <li data-target="#principal-carousel" data-slid-to="1"></li>
-                        <!--<li data-target="#principal-carousel" data-slid-to="2"></li>-->
-                    </ol>
+    <section id="secchslider" class="disInlineB">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner1.png" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/banner2.png" alt="">
-                        </div>
-                        <!--
-              <div class="carousel-item">
-                <img src="img/carousel3.jpg" width="1200" alt="">
-              </div>
-              -->
+                    <?php $files = get_post_meta( get_the_ID(), $prefix.'sliderprincipal', 1 ); ?>
+
+
+
+
+                    <div class="sliderHome disInlineB">
+
+                        <?php  foreach ( (array) $files as $attachment_id => $attachment_url ): ?>
+                            <div>
+                                <img src="<?php echo $attachment_url; ?>" alt="TEXTO CUALQUIERA">
+                            </div>
+
+                        <?php endforeach ?>
                     </div>
 
-                    <a href="#principal-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a href="#principal-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--Sección de los eventos-->
-<section>
-    <div class="container">
-        <!--sección de servicios y eventos-->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading-title text-center">
-                    <h1>Eventos Anuales</h1>
-                    <p>Estos son algunos de los eventos y proyectos realizados por la ESMUMEX anualmente
-                    </p>
+    </section>
+    <!--Sección de los eventos-->
+    <section>
+        <div class="container">
+            <!--sección de servicios y eventos-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading-title text-center">
+                        <?php echo wpautop( get_post_meta( get_the_ID(), $prefix.'wsg_txtdescevtanual', true ) ); ?>
+                    </div>
                 </div>
+            </div>
+            <div class="row">
+
+                <?php $vargrupevtanuales = get_post_meta( get_the_ID(), $prefix.'group_evtanuales', true ); ?>
+
+                <?php foreach ($vargrupevtanuales as $value): ?>
+                    <div class="col-md-4">
+                        <div class="service-area">
+                            <div class="media">
+                                <div class="service-icon">
+                                    <i class="fa fa-music fa-2x"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h3><?php echo $value['txttitanual']; ?> </h3>
+                                    <p>
+                                        <?php echo $value['wsg_descevtanual']; ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>ANIVERSARIO DE LA TRADICIONAL CALLEJONEADA (Febrero)</h3>
-                            <p>
-                                vento que se lleva a cabo todos los domingos del año en punto de las 6:00 p.m. en el teatro del calvario. Programa dirigido a todo el público en general. Un espacio abierto para todas las personas que desean dar a conocer su talento ya sea a través del arte (canto, baile, danza, poesía etc.) En esta ocasión se presentó el mariachi “los potrillos de Aguascalientes”.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>CASCABELEO PRIMAVERAL (Abril)</h3>
-                            <p>
-                                Evento dirigido a todos los niños en su mes. Se presenta un musical en vivo con todos los talleres de la ESMUMEX. Lo recaudado en esta ocasión fue dos pares de calcetines por persona y esto fue entregado al DIF para los niños desamparados.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>FIESTA NACIONAL DEL MARIACHI, SU CHARRERIA Y DANZA (Septiembre)</h3>
-                            <p>
-                                Viernes: Por la avenida 20 de Noviembre se llevó a cabo el tradicional desfile con 12 carros alegóricos conformado por danzas y grupos de mariachis. Sábado y domingo: Se llevan a cabo en el teatro Ricardo castro 4 galas de mariachis, donde participan grupos de diferentes Estados de la república mexicana. Domingo: Se llevó a cabo la clausura de la 11va fiesta nacional del mariachi en la plaza de Armas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>ANIVERSARIO DE LA ESCUELA DE LA MUSICA MEXICANA (Noviembre)</h3>
-                            <p>
-                                Se lleva a cabo el último fin de semana del mes de Noviembre.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>POR UNA ALEGRE NAVIDAD (Diciembre)</h3>
-                            <p>
-                                Se presenta un musical en vivo con los grupos de la ESMUMEX. Esta ocasión se pidió una prenda invernal por persona, para ser entregado a la señora Tere Álvarez del Castillo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-area">
-                    <div class="media">
-                        <div class="service-icon">
-                            <i class="fa fa-music fa-2x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3>Texto de prueba</h3>
-                            <p>
-                                Evento dirigido a todos los niños en su mes. Se presenta un musical en vivo con todos los talleres de la ESMUMEX. Lo recaudado en esta ocasión fue dos pares de calcetines por persona y esto fue entregado al DIF para los niños desamparados.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </section>
+    <!--sección de talleres impartidos-->
+    <section>
+         <div class="container">
 
-        </div>
-    </div>
-</section>
-<!--sección de talleres impartidos-->
-<section>
-    <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="section-heading-title text-center">
+                         <?php echo wpautop( get_post_meta( get_the_ID(), $prefix.'wsg_txtdescservs', true ) ); ?>
+                     </div>
+                 </div>
+             </div>
+             <!--nivel 1-->
+             <div class="row">
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading-title text-center">
-                    <h1>Servicios</h1>
-                    <p>Estos son algunos nuestros talleres impartidos.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--nivel 1-->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/guitarra.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div>
-                        <h3 class="talleres-titulo">Guitarra</h3>
+                 <?php $vargrupservs = get_post_meta( get_the_ID(), $prefix.'group_servs', true ); ?>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/violin.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Violín</h3>
+                 <?php foreach ($vargrupservs as $value): ?>
+                     <div class="col-md-3">
+                         <div class="talleres">
+                             <a href="<?php echo $value['txturlserv'] ?>">
+                                 <img src="<?php echo $value['imgserv'] ?>" class="card-img-top img-fluid" alt="SERVICIO">
+                             </a>
+                             <div>
+                                 <h3 class="talleres-titulo"><?php echo $value['txttitserv'] ?></h3>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/canto-y-vocalizacion.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Canto y vocalización</h3>
+                             </div>
+                         </div>
+                     </div>
+                 <?php endforeach ?>
+             </div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/mariachi.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Mariachi</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--nivel 2-->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/saxofon.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Saxofón</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/clarinete.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Clarinete</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/piano.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Piano</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/banda.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Banda</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--nivel 3-->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/flauta-transversal.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Flauta transversal</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/danza-folklorica.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Danza folklórica infantil y juvenil</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/acordeon.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Acordeón</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/bajo-sexto.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Bajo sexto</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--nivel 4-->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/bajo-electrico.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Bajo eléctrico</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/trompeta.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Trompeta</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/bateria.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Batería</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/mandolina.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Mandolina</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--nivel 5-->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="talleres">
-                    <a href="#">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/talleres/teatro.png" class="card-img-top img-fluid" alt="">
-                    </a>
-                    <div class="">
-                        <h3 class="talleres-titulo">Teatro</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+         </div>
+     </section>
 <!--Sección de grupos representativos-->
 <section>
     <div class="container">

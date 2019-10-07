@@ -42,3 +42,9 @@ footer .colinfo iframe{height:250px;}
 .single-post{
   background-color: rgba(240, 243, 244, 0.2);
 }
+
+#secchslider .col { padding: 0; }
+.sliderHome img{ width: 100%; }
+.sliderHome .slick-prev,.sliderHome .slick-next{z-index:99;}
+.sliderHome .slick-prev{left:20px;}
+.sliderHome .slick-next{right:20px;}

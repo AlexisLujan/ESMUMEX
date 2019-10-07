@@ -12,6 +12,7 @@ body{
   background-size: contain;
 
 }
+
 .card img:hover{
   filter: opacity(.9);
   -webkit-transform:scale(1.2);
