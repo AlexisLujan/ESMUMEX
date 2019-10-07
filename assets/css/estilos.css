@@ -1,0 +1,99 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  /*background: #000;*/
+  background-image: url('../img/logotipo_ESMUMEX.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+.card img:hover{
+  filter: opacity(.9);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+.service-icon{
+  width: 40px;
+}
+.fondo-servicios{
+  background: #3662A2;
+
+  color: #E3E3E3;
+}
+.talleres{
+
+}
+.talleres img:hover{
+  filter: opacity(.9);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+.carousel-item img{
+  width: 100%
+}
+/*Pruebas con el video banner*/
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+/*margenes entre secciones*/
+.eventos{
+  margin-top: 840px;
+}
+.main{
+  margin-top: 100px;
+}
+footer{
+  margin-top: 200px;
+  padding: 50px 50px;
+  background-color: #302F2F;
+
+}
+footer .titulos-footer,
+footer .parrafos-footer{
+  color: #959393;
+}
+/*posts*/
+.main .single-post{
+  background-color: rgba(240, 243, 244, 0.2);
+}
