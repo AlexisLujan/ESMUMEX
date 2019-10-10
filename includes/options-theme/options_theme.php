@@ -439,18 +439,18 @@
                 )
             ),
             array(
-                'id'       => 'med_logoacceso',
+                'id'       => 'med_imgfondobody',
                 'type'     => 'media',
                 'url'      => true,
-                'title'    => __( 'Imagen logo de Acceso', 'redux-framework-demo' ),
+                'title'    => __( 'Imagen de fondo del Body', 'redux-framework-demo' ),
                 'compiler' => 'true',
                 //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                'desc'     => __( 'Carga la imagen que se mostrará en el Favicon.', 'redux-framework-demo' ),
+                'desc'     => __( 'Carga la imagen que se mostrará en el Body.', 'redux-framework-demo' ),
                 'subtitle' => __( '', 'redux-framework-demo' ),
                 'default'  => array( 'url' => 'http://s.wordpress.org/style/images/codeispoetry.png' ),
                 'hint'      => array(
                     'title'     => '',
-                    'content'   => 'Tamaño ideal 110 x 110 px en formaton png.',
+                    'content'   => '',
                 )
             ),
             array(

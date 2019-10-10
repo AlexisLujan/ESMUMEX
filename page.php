@@ -5,6 +5,9 @@
       <?php if(have_posts()): while (have_posts()) : the_post(); ?>
         <div class="disInlineB">
           <h2 class=""><?php the_title(); ?></h2>
+          <div class="thumbnail">
+            <?php the_post_thumbnail() ?>
+          </div>
             <?php the_content(); ?>
         </div>
       <?php

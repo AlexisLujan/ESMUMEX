@@ -48,3 +48,22 @@ footer .colinfo iframe{height:250px;}
 .sliderHome .slick-prev,.sliderHome .slick-next{z-index:99;}
 .sliderHome .slick-prev{left:20px;}
 .sliderHome .slick-next{right:20px;}
+
+#carru-representativos{}
+#carru-representativos a{text-decoration:none;}
+#carru-representativos .continfo{height:550px;background-size:cover;display:flex;justify-content:center;text-align:center;align-items:flex-end;padding-bottom:25px;}
+#carru-representativos .info{background-color:#333;color:#fff;padding:12px 25px 40px;}
+#carru-representativos .info h4{}
+#carru-representativos .info p{margin:0;}
+#carru-representativos .slick-dots{bottom:30px;}
+#carru-representativos .slick-dots li{}
+#carru-representativos .slick-dots li button{}
+#carru-representativos .slick-dots li button::before{content:"";background-color:#fff;height:6px;width:25px}
+#carru-representativos .slick-dots li.slick-active button:before{}
+
+header form{float:right;}
+header form input[type="text"]{width:220px;float:left;}
+
+#contbuscador {  }
+
+.thumbnail{width:100%;}

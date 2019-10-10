@@ -14,7 +14,7 @@
   <meta name="msapplication-navbutton-color" content="#333">
   <meta name="apple-mobile-web-app-status-bar-style" content="#333">
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-image: url(<?php echo $configG['med_imgfondobody']['url'] ?>)">
   <header>
 <!--navbar y redes sociales-->
         <div class="redes-sociales col-xs-12"></div>
@@ -66,14 +66,11 @@
 
 
 
-            <div class="col col-sm-12 col-md-4 infoh">
-        				<?php if ($configG['chk_buscaheader']): ?>
-        					<form class="form-inline my-2 my-lg-0" action="">
-        						<input type="text" class="form-control mr-sm-2" placeholder="Buscar" aria-label="Buscar">
-        						<button class="btn btn-primary  my-2 my-sm-0">Buscar</button>
-        					</form>
-        				<?php endif ?>
-            </div>
+              <div class="col col-md-4 infoh">
+                  <?php if ($configG['chk_buscaheader']): ?>
+                  <?php get_search_form( ); ?>
+                  <?php endif ?>
+              </div>
           </div>
         </nav>
   </header>

@@ -21,41 +21,41 @@ jQuery(document).ready(function($) {
         }
     });*/
 
-    $('.sliderHome').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        speed: 250,
-        prevArrow: "<div class='a-left control-c prev slick-prev' > </div>",
-        nextArrow: "<div class='a-right control-c next slick-next' ></div>",
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: !0,
-                dots: !0
-            }
-        }, {
-            breakpoint: 780,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }, {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    });
+    $('.sliderHome, #carru-representativos').slick({
+       dots: false,
+       arrows: true,
+       slidesToShow: 1,
+       slidesToScroll: 1,
+       autoplay: false,
+       speed: 250,
+       prevArrow: "<div class='a-left control-c prev slick-prev' > </div>",
+       nextArrow: "<div class='a-right control-c next slick-next' ></div>",
+       responsive: [{
+           breakpoint: 1024,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               infinite: !0,
+               dots: !0
+           }
+       }, {
+           breakpoint: 780,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       }, {
+           breakpoint: 600,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       }, {
+           breakpoint: 480,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       }]
+   });
 });

@@ -34,7 +34,7 @@ function cmb2_pagina_inicio() {
 		),
 	) );
 
-
+/*Eventos anuales*/
     $cmb->add_field( array(
 		'name' => 'Seccion Eventos Anuales',
 		'desc' => 'Configura la informacion de la seccion',
@@ -79,7 +79,7 @@ function cmb2_pagina_inicio() {
 	) );
 
 	/*Fin de seccion*/
-
+/*Talleres y servicios*/
 	$cmb->add_field( array(
 		'name' => 'Seccion Servicios',
 		'desc' => 'Configura la informacion de la seccion',
@@ -143,8 +143,56 @@ function cmb2_pagina_inicio() {
 		),
 		'preview_size' => 'medium', // Image size to use when previewing in the admin.
 	)   );
-
-
+  /*Grupos representativos*/
+  $group_field_id = $cmb->add_field( array(
+		'id'          => $prefix.'group_repre',
+		'type'        => 'group',
+		'description' => __( 'Informacion de los Grupos Representativos', 'cmb2' ),
+		// 'repeatable'  => false, // use false if you want non-repeatable group
+		'options'     => array(
+		'group_title'       => __( 'Grupo {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+		'add_button'        => __( 'Añadir otro Grupo', 'cmb2' ),
+		'remove_button'     => __( 'Eliminar Grupo', 'cmb2' ),
+		'sortable'          => true,
+		'closed'         => true,
+		// 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ),
+		),
+	) );
+	$cmb->add_group_field( $group_field_id, array(
+		'name'    => 'Titulo y Descripcion',
+		'desc'    => 'Titulo y descripcion del Grupo',
+		'id'      => 'txttitserv',
+		'type'    => 'wysiwyg',
+		'options' => array(),
+	) );
+	$cmb->add_group_field( $group_field_id, array(
+		'name' => __( 'URL Servicio', 'cmb2' ),
+		'id'   => 'txturlserv',
+		'type' => 'text_medium',
+	)  );
+	$cmb->add_group_field( $group_field_id, array(
+		'name'    => 'Imagen personalizada',
+		'desc'    => '',
+		'id'      => 'imgserv',
+		'type'    => 'file',
+		// Optional:
+		'options' => array(
+			'url' => false, // Hide the text input for the url
+		),
+		'text'    => array(
+			'add_upload_file_text' => 'Add File' // Change upload button text. Default: "Add or Upload File"
+		),
+		'query_args' => array(
+			//'type' => 'application/pdf', // Make library only display PDFs.
+			// Or only allow gif, jpg, or png images
+			/*'type' => array(
+			'image/gif',
+			'image/jpeg',
+			'image/png',
+			),*/
+		),
+		'preview_size' => 'medium', // Image size to use when previewing in the admin.
+	)   );
 
 }
 add_action( 'cmb2_admin_init', 'cmb2_pagina_inicio' );
