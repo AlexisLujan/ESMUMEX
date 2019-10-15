@@ -42,7 +42,7 @@
                 <?php $vargrupevtanuales = get_post_meta( get_the_ID(), $prefix.'group_evtanuales', true ); ?>
 
                 <?php foreach ($vargrupevtanuales as $value): ?>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="service-area">
                             <div class="media">
                                 <div class="service-icon">
@@ -63,7 +63,7 @@
         </div>
     </section>
     <!--sección de talleres impartidos-->
-    <section>
+    <section class="talleres-fondo">
          <div class="container">
 
              <div class="row">
@@ -79,7 +79,7 @@
                  <?php $vargrupservs = get_post_meta( get_the_ID(), $prefix.'group_servs', true ); ?>
 
                  <?php foreach ($vargrupservs as $value): ?>
-                     <div class="col-md-3">
+                     <div class="col-6 col-md-4 col-lg-3">
                          <div class="talleres">
                              <a href="<?php echo $value['txturlserv'] ?>">
                                  <img src="<?php echo $value['imgserv'] ?>" class="card-img-top img-fluid" alt="SERVICIO">

@@ -66,7 +66,7 @@
 
 
 
-              <div class="col col-md-4 infoh">
+              <div class="my-3 col-12 col-sm-6 col-md-4 infoh">
                   <?php if ($configG['chk_buscaheader']): ?>
                   <?php get_search_form( ); ?>
                   <?php endif ?>
