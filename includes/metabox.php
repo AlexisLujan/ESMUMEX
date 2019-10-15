@@ -48,6 +48,13 @@ function cmb2_pagina_inicio() {
 		'type'    => 'wysiwyg',
 		'options' => array(),
 	) );
+    //modo oscuro en la seccion
+	$cmb->add_field( array(
+		'name' => 'Activar capa',
+		'desc' => 'Activar capa transparente y texto blanco',
+		'id'   => $prefix.'chk_cap_secceventos',
+		'type' => 'checkbox',
+	) );
 
 	$group_field_id = $cmb->add_field( array(
 		'id'          => $prefix.'group_evtanuales',

@@ -1,4 +1,4 @@
-<?php /* template Name: Pagina Inicio */ ?>
+<?php /* Template Name: Pagina Inicio */ ?>
 <?php     get_header(); $prefix = 'cmb2_paghome_'; ?>
 
 <!--Carousel para los banners-->
@@ -27,7 +27,13 @@
         </div>
     </section>
     <!--Sección de los eventos-->
-    <section>
+    <?php
+    $capevt = "";
+    if (get_post_meta( get_the_ID(), $prefix.'chk_cap_secceventos', true )) {
+        $capevt = 'capa ';
+    }
+?>
+    <section id="secch-eventos" class="disInlineB <?php echo $capevt; ?> ">
         <div class="container">
             <!--sección de servicios y eventos-->
             <div class="row">
@@ -63,7 +69,7 @@
         </div>
     </section>
     <!--sección de talleres impartidos-->
-    <section class="talleres-fondo">
+    <section class="disInlineB talleres-fondo">
          <div class="container">
 
              <div class="row">

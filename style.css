@@ -11,7 +11,7 @@ Tags: ICED
 Text Domain: ESMUMEX
 */
 iframe,img{max-width:100%;}
-.disInlineB{display:inline-block;float:left;width:100%;}
+.disInlineB{display:inline-block;float:left;width:100%; position:relative;}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
@@ -40,7 +40,8 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 footer .colinfo{color:#959393;}
 footer .colinfo iframe{height:250px;}
 .single-post{
-  background-color: rgba(240, 243, 244, 0.3);
+  padding-top: 40px;
+  background-color: rgba(240, 243, 244, 0.6);
   font-size: 1.25rem;
   font-family: sans-serif;
   font-weight: 600;
@@ -69,5 +70,23 @@ header form{float:right;}
 header form input[type="text"]{width:220px;float:left;}
 
 #contbuscador {  }
+#secch-eventos.capa{color:#fff;}
+#secch-eventos.capa:after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;background-color:#000;opacity:0.4;z-index:-1;}
+
+.img-principal{height:265px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;background-position:center center;background-size:cover;}
+.img-principal h1{color:#fff;margin:0;z-index:9;}
+.img-principal:after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;background-color:#000;opacity:0.4;}
+.page-template-default .contenido{padding:25px 0;}
+.page-template-default .contenido ul{list-style:none;margin-left:0;padding-left:0;}
+.page-template-default .contenido ul > li{padding-left:1em;text-indent:-1em;}
+.page-template-default .contenido ul > li:before{content:"\f133";font-family:FontAwesome;padding-right:5px;}
+.page-template-page-eventos .tit-principal{padding:30px;text-align:center;}
+.page-template-page-eventos .tit-principal h2{}
+.page-template-page-eventos .eventos{padding:20px 0 30px;margin:0;}
+.evento{margin-bottom:20px;}
+.evento .img-destacada{height:145px;background-size:cover;background-position:center;}
+.evento .resumen-page{}
+.evento .resumen-page .titulo{margin-top:10px;margin-bottom:15px;}
+.evento .resumen-page .titulo h2{color:#333;font-size:23px;text-align:center;margin:0;}
 
 .thumbnail img{padding-top: 25px; width:100%; height: 480px;}
