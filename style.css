@@ -89,4 +89,10 @@ header form input[type="text"]{width:220px;float:left;}
 .evento .resumen-page .titulo{margin-top:10px;margin-bottom:15px;}
 .evento .resumen-page .titulo h2{color:#333;font-size:23px;text-align:center;margin:0;}
 
+.paginado{width:auto;display:table;margin:25px auto 0;}
+.paginado>li{display:block;float:left;margin:0 4px;-moz-transition:all .6s;-webkit-transition:all .6s;transition:all .6s}
+.paginado>li>a,.paginado>li>span,.paginado>li>span a{background-color:#287bbf;color:#ffffff;-moz-transition:all .6s;-webkit-transition:all .6s;transition:all .6s;padding:10px 15px;text-decoration:none;outline:none;}
+.paginado>li>a.current,.paginado>li>span.current{background-color:#074A82;color:#ffffff}
+.paginado>li>a:hover,.paginado>li>span:hover{box-shadow:inset 45px 0 0 0 #074A82;color:#ffffff}
+
 .thumbnail img{padding-top: 25px; width:100%; height: 480px;}

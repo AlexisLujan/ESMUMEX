@@ -2,6 +2,7 @@
 include locate_template('/includes/options-theme/options_theme.php');
 include('includes/wp_bootstrap_navwalker.php');
 include('includes/metabox.php');
+include('includes/shortcodes.php');
 
 add_theme_support('post-thumbnails', array('post', 'page', 'product'));
 

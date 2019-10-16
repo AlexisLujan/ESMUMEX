@@ -203,3 +203,26 @@ function cmb2_pagina_inicio() {
 
 }
 add_action( 'cmb2_admin_init', 'cmb2_pagina_inicio' );
+
+/*Metabox Pagina Eventos*/
+function cmb2_pagina_eventos() {
+    $prefix = 'cmb2_pagevts_';
+    $cmb = new_cmb2_box( array(
+        'id'           => $prefix.'datos_adicionales',
+        'title'        => 'Información a Mostrar',
+        'object_types' => array( 'page' ),
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-eventos.php' ),
+        'context'      => 'normal', //  'normal', 'advanced', or 'side'
+		'priority'     => 'high',  //  'high', 'core', 'default' or 'low'
+		'show_names'   => true, // Show field names on the left
+    ) );
+
+    $cmb->add_field( array(
+		'name'    => 'Shortcode Eventos',
+		'desc'    => 'El shortcode para mostrar el bloque.',
+		'default' => '',
+		'id'      => $prefix.'txt_shortpublicaciones',
+		'type'    => 'text'
+	) );
+}
+add_action( 'cmb2_admin_init', 'cmb2_pagina_eventos' );
