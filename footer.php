@@ -1,5 +1,5 @@
 <?php global $configG ?>
-<footer>
+<footer class="disInlineB">
   <div class="container">
     <div class="row">
       <div class="col1 colinfo col-md-4">

@@ -3,7 +3,7 @@ include locate_template('/includes/options-theme/options_theme.php');
 include('includes/wp_bootstrap_navwalker.php');
 include('includes/metabox.php');
 
-add_theme_support('post-thumbnails', array('post', 'page', 'product', 'eventos'));
+add_theme_support('post-thumbnails', array('post', 'page', 'product'));
 
 add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
