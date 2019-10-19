@@ -30,26 +30,12 @@
 				          </a>
 			     </div>
             <!--<a href="#" class="navbar-brand">Logotipo</a>-->
-        <div class="col col-md-6 infoh">
+        <div class="col col-md-6 infoh colmenuh">
 				<?php if ($configG['chk_act_menu']): ?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-label="Menu de Navegacion">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbar">
-						<!-- <ul class="navbar-nav mr-auto">
-							<li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" >
-									Talleres </a>
-								<div class="dropdown-menu" aria-labelledby="menu-categorias">
-									<a href="#" class="dropdown-item">Guitarra</a>
-									<a href="#" class="dropdown-item">Teatro</a>
-									<a href="#" class="dropdown-item">Danza Floklorica</a>
-								</div>
-							</li>
-							<li class="nav-item"><a href="#" class="nav-link">Grupos representativos</a></li>
-							<li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-						</ul> -->
+					<div class="collapse navbar-collapse" id="navbar">						
 						<?php
 	                        wp_nav_menu( array(
 	                          'theme_location' => 'top_menu',

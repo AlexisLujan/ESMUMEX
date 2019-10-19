@@ -34,7 +34,7 @@ function cmb2_pagina_inicio() {
 		),
 	) );
 
-/*Eventos anuales*/
+	/*Eventos anuales*/
     $cmb->add_field( array(
 		'name' => 'Seccion Eventos Anuales',
 		'desc' => 'Configura la informacion de la seccion',
@@ -86,7 +86,7 @@ function cmb2_pagina_inicio() {
 	) );
 
 	/*Fin de seccion*/
-/*Talleres y servicios*/
+	/*Talleres y servicios*/
 	$cmb->add_field( array(
 		'name' => 'Seccion Servicios',
 		'desc' => 'Configura la informacion de la seccion',

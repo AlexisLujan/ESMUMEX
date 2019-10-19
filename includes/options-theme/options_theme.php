@@ -563,6 +563,13 @@
                 'desc'     => __('Esta url se usa en diversas partes del sitio', 'redux-framework-demo'),
             ),
             array(
+                'id'       => 'url_social_whatsapp',
+                'type'     => 'text',
+                'title'    => __('URL Whatsapp', 'redux-framework-demo'),
+                'subtitle' => __('', 'redux-framework-demo'),
+                'desc'     => __('Esta url se usa en diversas partes del sitio', 'redux-framework-demo'),
+            ),
+            array(
                 'id'       => 'url_social_googleplus',
                 'type'     => 'text',
                 'title'    => __('URL Google Plus', 'redux-framework-demo'),
@@ -621,6 +628,538 @@
 
         )
     ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Colores', 'redux-framework-demo' ),
+        'id'     => 'confColoresGeneral',
+        'subsection'    => true,
+        'desc'   => __( 'Configuración de los colores de algunas secciones del sitio.', 'redux-framework-demo' ),
+        'fields' => array(
+
+            array(
+               'id' => 'start_ColoresHeader',
+               'type' => 'section',
+               'title' => __('Colores en el Header', 'redux-framework-demo'),
+               'subtitle' => __('En esta seccion configura los colores del Header.', 'redux-framework-demo'),
+               'indent' => true 
+            ),
+            array(
+                'id'        => 'selcolor_fondoheader',
+                'type'      => 'color_rgba',
+                'title'     => 'Fondo Header',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo que tendra el Header del sitio.',
+                'default'   => array(
+                    'color'     => '#343a40',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),
+            array(
+                'id'        => 'selcolor_menuheader',
+                'type'      => 'color_rgba',
+                'title'     => 'Color Menu',
+                'subtitle'  => '',
+                'desc'      => 'Color de fondo para los item del menu principal.',
+                'default'   => array(
+                    'color'     => '#fff',
+                    'alpha'     => 0.5
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),
+            
+            array(
+               'id' => 'end_ColoresHeader',
+               'type' => 'section',
+               'indent' => true 
+            ), 
+
+            array(
+               'id' => 'start_ColoresFooter',
+               'type' => 'section',
+               'title' => __('Colores en el Footer', 'redux-framework-demo'),
+               'subtitle' => __('En esta seccion configura los colores del Footer.', 'redux-framework-demo'),
+               'indent' => true 
+            ),
+            array(
+                'id'        => 'selcolor_PreFooter',
+                'type'      => 'color_rgba',
+                'title'     => 'Fondo Pre Footer',
+                'subtitle'  => 'Configuracion del color de fondo',
+                'desc'      => 'Selecciona el color de fondo que tendra el Pre Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#0B0B0B',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),      
+            array(
+                'id'        => 'selcolor_TextoPreFooter',
+                'type'      => 'color_rgba',
+                'title'     => 'Texto Pre Footer',
+                'subtitle'  => 'Configuracion del color del texto',
+                'desc'      => 'Selecciona el color del texto en el Pre Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),       
+            array(
+                'id'        => 'selcolor_TitulosPreFooter',
+                'type'      => 'color_rgba',
+                'title'     => 'Titulos Pre Footer',
+                'subtitle'  => 'Configuracion del color de los titulos',
+                'desc'      => 'Selecciona el color de los titulos en el Pre Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ), 
+            array(
+                'id'        => 'selcolor_LineasPreFooter',
+                'type'      => 'color_rgba',
+                'title'     => 'Lineas Pre Footer',
+                'subtitle'  => 'Configuracion del color de las lineas de los titulos',
+                'desc'      => 'Selecciona el color de las lineas en los titulos en el Pre Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),        
+            array(
+                'id'        => 'selcolor_Footer',
+                'type'      => 'color_rgba',
+                'title'     => 'Fondo Footer',
+                'subtitle'  => 'Configuracion del color de fondo',
+                'desc'      => 'Selecciona el color de fondo que tendra el Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#000000',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),       
+            array(
+                'id'        => 'selcolor_TextoFooter',
+                'type'      => 'color_rgba',
+                'title'     => 'Texto Footer',
+                'subtitle'  => 'Configuracion del color del texto',
+                'desc'      => 'Selecciona el color del texto en el Footer del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),            
+            array(
+               'id' => 'end_ColoresFooter',
+               'type' => 'section',
+               'indent' => true 
+            ), 
+
+
+            array(
+               'id' => 'start_ColoresMenu',
+               'type' => 'section',
+               'title' => __('Colores en el Menú', 'redux-framework-demo'),
+               'subtitle' => __('En esta seccion configura los colores del Menú.', 'redux-framework-demo'),
+               'indent' => true 
+            ),
+            array(
+                'id'        => 'selcolor_FondoMenu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color de fondo en el Menú',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo que tendra el Menú del sitio.',
+                'default'   => array(
+                    'color'     => 'transparent',
+                    'alpha'     => 0
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),
+            array(
+                'id'        => 'selcolor_FondoLevel1Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color de fondo en el Menú nivel 1',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo que tendra el Menú del nivel 1 del sitio.',
+                'default'   => array(
+                    'color'     => 'transparent',
+                    'alpha'     => 0
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),        
+            array(
+                'id'        => 'selcolor_TextoLevel1Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color del texto en el Menú nivel 1',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color del texto que tendra el Menú del nivel 1 del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),    
+            array(
+                'id'        => 'selcolor_HoverFondoLevel1Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color de fondo al hover en el Menú nivel 1',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo al hover que tendra el Menú del nivel 1 del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),        
+            array(
+                'id'        => 'selcolor_HoverTextoLevel1Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color del texto al hover en el Menú nivel 1',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color del texto al hover que tendra el Menú del nivel 1 del sitio.',
+                'default'   => array(
+                    'color'     => '#444444',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),    
+            array(
+                'id'        => 'selcolor_FondoLevel2Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color de fondo en el Menú nivel 2',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo que tendra el Menú del nivel 2 del sitio.',
+                'default'   => array(
+                    'color'     => '#ffffff',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),        
+            array(
+                'id'        => 'selcolor_TextoLevel2Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color del texto en el Menú nivel 2',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color del texto que tendra el Menú del nivel 2 del sitio.',
+                'default'   => array(
+                    'color'     => '#444444',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),   
+
+            array(
+                'id'        => 'selcolor_HoverFondoLevel2Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color de fondo al hover en el Menú nivel 2',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color de fondo al hover que tendra el Menú del nivel 2 del sitio.',
+                'default'   => array(
+                    'color'     => '#f5f5f5',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),        
+            array(
+                'id'        => 'selcolor_HoverTextoLevel2Menu',
+                'type'      => 'color_rgba',
+                'title'     => 'Color del texto al hover en el Menú nivel 2',
+                'subtitle'  => 'Configuracion del color',
+                'desc'      => 'Selecciona el color del texto al hover que tendra el Menú del nivel 2 del sitio.',
+                'default'   => array(
+                    'color'     => '#888888',
+                    'alpha'     => 1
+                ),
+                'options'       => array(
+                    'show_input'                => true,
+                    'show_initial'              => true,
+                    'show_alpha'                => true,
+                    'show_palette'              => false,
+                    'show_palette_only'         => false,
+                    'show_selection_palette'    => true,
+                    'max_palette_size'          => 10,
+                    'allow_empty'               => true,
+                    'clickout_fires_change'     => false,
+                    'choose_text'               => 'Escoger',
+                    'cancel_text'               => 'Cancelar',
+                    'show_buttons'              => true,
+                    'use_extended_classes'      => true,
+                    'palette'                   => null,  // show default
+                    'input_text'                => 'Selecciona el color'
+                ),                        
+            ),            
+            array(
+               'id' => 'end_ColoresMenu',
+               'type' => 'section',
+               'indent' => true 
+            ), 
+
+        )
+    ));
+
+
+
+
 
     /*
      * <--- END SECTIONS

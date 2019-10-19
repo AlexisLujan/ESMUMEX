@@ -1,5 +1,5 @@
 <?php /* Template Name: Eventos */ ?>
-<?php get_header(); $prefix = 'cmb2_pageventos_'; ?>
+<?php get_header(); $prefix = 'cmb2_pagevts_'; ?>
 
 <section id="secc-titulo" class="tit-principal disInlineB">
     <div class="container">

@@ -8,7 +8,6 @@
       <div class="col2 colinfo col-md-4">
         <?php echo wpautop( $configG['text_info_col2'] ); ?>
         <?php echo $configG['cod_mapacol2_footer']; ?>
-
         <?php echo do_shortcode( '[redes_sociales]' ) ?>
       </div>
       <div class="col3 colinfo col-md-4">
@@ -18,6 +17,8 @@
   </div>
 </footer>
 <?php wp_footer(); ?>
+
+<?php include 'includes/estilos-programados.php'; ?>
 
 </body>
 </html>

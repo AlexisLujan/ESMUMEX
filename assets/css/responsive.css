@@ -1,0 +1,11 @@
+@media only screen and (min-width:681px) and (max-width:780px) { }
+@media only screen and (max-width:680px) {
+	.navbar-dark .navbar-toggler { float: right; }
+	.navbar.navbar-light .navbar-nav > li > a { display: inline-block; float: left; width: 100% }
+	header .navbar-collapse { position: absolute; left: 0; width: 100%; top: 44px; background-color: #343a40; z-index: 9; color: #fff; }
+	header .navbar-nav .dropdown-menu { position: static; float: none; padding: 0; margin: 0;     border: none;}
+	header .infoh.colmenuh { position: initial; }
+	header form .form-control { border-radius: 4px 0 0 4px; }
+	header form button.btn { margin: 0 !important; border-radius: 0 4px 4px 0; }
+	footer {  padding: 10px 15px 20px; }
+}

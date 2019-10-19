@@ -6,19 +6,23 @@ function most_redes_sociales() {
 	?>
 	<div id="redes-sociales" class="redes-sociales disInlineB">
 		<?php if ($configG['url_social_facebook']!= ""): ?>
-			<a href="<?php echo $chefdeco['url_social_facebook'] ?>" target="_blank" class="icon-button facebook"><i class="icofont-facebook"></i><span></span></a>
+			<a href="<?php echo $configG['url_social_facebook'] ?>" target="_blank" class="icon-button facebook"><i class="icofont-facebook"></i><span></span></a>
 		<?php endif ?>
 		<?php if ($configG['url_social_twitter']!= ""): ?>
-			<a href="<?php echo $chefdeco['url_social_twitter'] ?>" target="_blank" class="icon-button twitter"><i class="icofont-twitter"></i><span></span></a>
+			<a href="<?php echo $configG['url_social_twitter'] ?>" target="_blank" class="icon-button twitter"><i class="icofont-twitter"></i><span></span></a>
 		<?php endif ?>
 		<?php if ($configG['url_social_pinterest']!= ""): ?>
-			<a href="<?php echo $chefdeco['url_social_pinterest'] ?>" target="_blank" class="icon-button pinterest"><i class="icofont-pinterest"></i><span></span></a>
+			<a href="<?php echo $configG['url_social_pinterest'] ?>" target="_blank" class="icon-button pinterest"><i class="icofont-pinterest"></i><span></span></a>
 		<?php endif ?>
 		<?php if ($configG['url_social_youtube']!= ""): ?>
-			<a href="<?php echo $chefdeco['url_social_youtube'] ?>" target="_blank" class="icon-button youtube"><i class="icofont-youtube"></i><span></span></a>
+			<a href="<?php echo $configG['url_social_youtube'] ?>" target="_blank" class="icon-button youtube"><i class="icofont-youtube"></i><span></span></a>
 		<?php endif ?>
 		<?php if ($configG['url_social_instagram']!= ""): ?>
-			<a href="<?php echo $chefdeco['url_social_instagram'] ?>" target="_blank" class="icon-button instagram"><i class="icofont-instagram"></i><span></span></a>
+			<a href="<?php echo $configG['url_social_instagram'] ?>" target="_blank" class="icon-button instagram"><i class="icofont-instagram"></i><span></span></a>
+		<?php endif ?>
+		<?php if ($configG['url_social_whatsapp']!= ""): ?>
+			<a href="<?php echo $configG['url_social_whatsapp'] ?>" target="_blank" class="icon-button whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+<span></span></a>
 		<?php endif ?>
 	</div>
 	<?php
