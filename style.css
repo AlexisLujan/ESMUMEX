@@ -61,7 +61,7 @@ footer .colinfo iframe{height:250px;}
 footer .icon-button i{color:#959393;}
 footer .icon-button:hover i{color:#fff;}
 footer div#redes-sociales{display:flex;justify-content:center;margin-top:15px;}
-.single-post{padding-top:40px;background-color:rgba(240,243,244,0.6);font-size:1.25rem;font-family:sans-serif;font-weight:600;padding:0px 25px;}
+.container .single-post{padding-top:40px;background-color:rgba(240,243,244,0.6);font-size:1.25rem;font-family:sans-serif;font-weight:600;padding:0px 25px;}
 #secchslider .col{padding:0;}
 .sliderHome img{width:100%;}
 .sliderHome .slick-prev,.sliderHome .slick-next{z-index:99;}
